@@ -44,24 +44,21 @@ $formData = $_SESSION['formData'];
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #f2f2f2; /* Background abu-abu terang untuk tabel */
+            background-color: #f2f2f2;
         }
 
-        /* Warna background baris ketika di hover */
         table tr:hover {
-            background-color: #e0e0e0; /* Background abu-abu lebih gelap saat hover */
+            background-color: #e0e0e0;
         }
 
-        /* Gaya untuk sel tabel */
         table td, table th {
             padding: 10px;
             border: 1px solid #ccc;
             text-align: left;
         }
 
-        /* Gaya untuk header tabel */
         table th {
-            background-color: #d0d0d0; /* Warna abu-abu sedikit lebih gelap untuk header */
+            background-color: #d0d0d0;
             color: #333;
         }
     </style>

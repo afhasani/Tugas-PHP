@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
-    // Validasi file
     if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         $fileTmpPath = $_FILES['file']['tmp_name'];
         $fileName = $_FILES['file']['name'];
@@ -21,13 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die('Format file tidak valid.');
         }
 
-        if ($fileSize > 2 * 1024 * 1024) { // Maksimal 2 MB
+        if ($fileSize > 1024) {
             die('Ukuran file terlalu besar.');
         }
 
         $fileContent = file_get_contents($fileTmpPath);
 
-        // Simpan data ke sesi
         $_SESSION['formData'] = [
             'name' => $name,
             'email' => $email,
@@ -37,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'userAgent' => $_SERVER['HTTP_USER_AGENT'],
         ];
 
-        // Redirect ke halaman hasil
         header('Location: result.php');
         exit();
     } else {

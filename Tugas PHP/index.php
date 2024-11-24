@@ -25,14 +25,14 @@
             opacity: 0.7;
         }
         .form-control {
-            background-color: #393E46 !important; /* Warna abu-abu */
-            border-color: #4a515c!important;       /* Border abu-abu */
+            background-color: #393E46; 
+            border-color: #4a515c;
             color: white;
         }
         .form-control:focus {
-            background-color: #292d33 !important; /* Abu-abu lebih gelap saat fokus */
-            border-color: #007bff !important;    /* Border biru saat fokus */
-            box-shadow: none !important;         /* Hilangkan efek shadow fokus */
+            background-color: #292d33;
+            border-color: #007bff;
+            box-shadow: none;
             color: white;
         }
         .btn-primary{
